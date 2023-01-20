@@ -1,0 +1,41 @@
+{
+	"name": "word-reciter",
+	"version": "1.0.0",
+	"description": "一款辅助背词工具，通过导入生词表，或者笔记模板，可一键生成英英释义及柯林斯释义笔记，支持HTML及MarkDown格式",
+	"main": "index.js",
+	"repository": "https://github.com/Styunlen/WordReciter.git",
+	"author": "styunlen <styunlen@qq.com>",
+	"license": "GPL-3.0",
+	"private": false,
+	"scripts": {
+		"prepare": "husky install",
+		"lint": "pnpm lint-staged",
+		"pretty": "pnpm pretty-quick --staged"
+	},
+	"devDependencies": {
+		"@commitlint/cli": "^17.4.2",
+		"@commitlint/config-conventional": "^17.4.2",
+		"cz-conventional-changelog": "^3.3.0",
+		"cz-customizable": "^7.0.0",
+		"eslint": "^8.32.0",
+		"eslint-config-prettier": "^8.6.0",
+		"eslint-plugin-prettier": "^4.2.1",
+		"eslint-plugin-react": "^7.32.1",
+		"husky": "^8.0.3",
+		"lint-staged": "^13.1.0",
+		"prettier": "^2.8.3",
+		"pretty-quick": "^3.1.3",
+		"vue-eslint-parser": "^9.1.0"
+	},
+	"config": {
+		"commitizen": {
+			"path": "./node_modules/cz-conventional-changelog"
+		}
+	},
+	"lint-staged": {
+		"*.js": [
+			"eslint --fix",
+			"prettier --write"
+		]
+	}
+}
