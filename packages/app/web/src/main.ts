@@ -1,0 +1,21 @@
+import { createApp, popScopeId } from "vue";
+import "./style.css";
+import App from "./App.vue";
+import PrimeVue from "primevue/config";
+import "primevue/resources/themes/lara-light-indigo/theme.css";
+import "primevue/resources/primevue.min.css";
+import "primeicons/primeicons.css";
+import "../public/primeflex.min.css";
+import Dialog from "primevue/dialog";
+import Message from "primevue/message";
+import Button from "primevue/button";
+import Card from "primevue/card";
+import Divider from "primevue/divider";
+
+const app = createApp(App).use(PrimeVue, { ripple: true });
+app.component("Dialog", Dialog);
+app.component("Message", Message);
+app.component("Button", Button);
+app.component("Card", Card);
+app.component("Divider", Divider);
+app.mount("#app");

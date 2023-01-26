@@ -6,11 +6,12 @@
 	"repository": "https://github.com/Styunlen/WordReciter.git",
 	"author": "styunlen <styunlen@qq.com>",
 	"license": "GPL-3.0",
-	"private": false,
+	"private": true,
 	"scripts": {
 		"prepare": "husky install",
 		"lint": "pnpm lint-staged",
-		"pretty": "pnpm pretty-quick --staged"
+		"pretty": "pnpm pretty-quick --staged",
+		"dev:web": "pnpm -F word-reciter-webapp dev"
 	},
 	"devDependencies": {
 		"@commitlint/cli": "^17.4.2",
